@@ -99,6 +99,9 @@ footer {
     left: 0;
 }
 
+.row {
+    border-radius: 2px;
+}
 
 /* Remove animations for those who have turned them off */
 @media (prefers-reduced-motion: reduce) {
@@ -115,6 +118,10 @@ footer {
 /* --------------------- */
 /* Utility Classes       */
 /* --------------------- */
+
+.border-brand-blue {
+    border: 1px solid hsl( var(--clr-brand-blue) );
+}
 
 .outline-brand-blue {
     text-shadow:
@@ -163,11 +170,20 @@ footer {
 
 .container {
     /* Padding and margin inline is left and right */
+    border-radius: 2px;
     background-color: none;
     padding-inline: 2em;
     margin-inline: auto;
     max-width: 80rem;
 }
+
+.center {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    text-align: left;
+    align-items: left;
+  }
 
 .page-container {
     position: relative;

@@ -2,7 +2,7 @@
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
-        <meta name="title" content="ProjectConnect - Home">
+        <meta name="title" content="ProjectConnect - Search">
         <meta name="description" content="Students, rate your college peers, compare ratings, strengths, and weaknesses to help you build your perfect project team. Professors, track your students project teams and peer reviews all in one place.">
         <meta name="keywords" content="student, professor, rate, team, project, review, peer, group">
         <meta name="author" content="ProjectConnect">
@@ -30,22 +30,20 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
-        <title>PC - Home</title>
+        <title>PC - Search</title>
         <style>
-            #hometitle {
-                text-shadow: -1px 1px 0px #000,
-				  1px 1px 0px #000,
-				  1px -1px 0px #000,
-				  -1px -1px 0px #000;
-            }
             #navbar-brand { white-space: nowrap; }
             .bttn, .navbar-img { display: inline-block; }
+
+            ul.list li {
+                margin-top: 20px;
+            }
         </style>
     </head>
 
     <body style="background-color: hsl( var(--clr-white) );">
-        <div class="page-container">
-            <div class="content-wrap" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('img/home/teamwork.jpg');">
+        <div class="page-container bg-light">
+            <div class="content-wrap">
                 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow"
                     style="border-top: 1px solid hsl( var(--clr-brand-blue) ); border-bottom: 3px solid hsl( var(--clr-brand-blue) );">
                     <div class="navbar-brand">
@@ -110,52 +108,86 @@
                     </div>
                 </nav>
 
-                <div class="lightly-pad-container bg-brand-blue text-white text-break">
-                    <h1 class="ff-sans-bolder text-center textshadow">Welcome to ProjectConnect!</h1>
-                </div>
-
-                <div class="flow container">
-                    <div class="row card-row">
-                        <div class="col-sm card">
-                            <h2 class="text-center">For Students</h2>
-                            <p class="card-text">
-                                Picking the right collaborators for a project can feel like a shot in
-                                the dark, especially if you haven't met many of your peers. You need to
-                                know who's responsible, who communicates well, or who can lead effectively.
-                                ProjectConnect aims at taking the guesswork out of choosing your teammates
-                                by showing you ratings of other students in your college and in your classes.
-                                <br><br>
-                                Ratings are based off of peer evaluations from past projects, so as more
-                                projects are completed, you get a better idea of your peers' strengths and
-                                weaknesses. All of this makes it easier on you, the student, to find others
-                                who can be a good fit on your next team.
-                                <br><br><br>
-                                <button class="bttn-brand-blue" style="width: 100%;">
-                                    Find out more
-                                </button>
-                            </p>
-                        </div>
-                        <div class="col-xs"><p>&emsp;&emsp;</p></div>
-                        <div class="col-sm card">
-                            <h2 class="text-center">For Professors</h2>
-                            <p class="card-text">
-                                Class project grades often depend in part on peer evaluations. Creating,
-                                distributing, and keeping track of all the evaluations your students
-                                complete across courses and sections can be a headache. ProjectConnect
-                                streamlines the your ability to distribute and track peer evaluations.
-                                You can set them to be sent to your students on a per-project basis at
-                                a precise time and view who has completed them in each class.
-                                <br><br>
-                                What's more? For class settings where the professor assigns teams,
-                                ProjectConnect offers a great way to get insight into which students
-                                will work well together and what problems students are having with their
-                                peers.
-                                <br><br>
-                                <button class="bttn-brand-blue" style="width: 100%;">
-                                    Find out more
-                                </button>
-                            </p>
-                        </div>
+                <div class="center" id="student-search-list" style="align-items: right; text-align: right;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    <input type="text" class="search" placeholder="Name, grade level, rating" style="border-radius: 5px; vertical-align: middle;">
+                    <a style="margin-left: 15px;">
+                        <button class="sort btn btn-outline-primary" id="student-name-sort" data-sort="student-name">
+                            <i class="bi bi-sort-alpha-up" id="student-name-sort-icon"></i>
+                        </button>
+                        Sort A-Z
+                    </a>
+                    <a style="margin-left: 15px;">
+                        <button class="sort btn btn-outline-primary" id="student-rating-sort" data-sort="student-rating">
+                            <i class="bi bi-sort-numeric-up" id="student-rating-sort-icon"></i>
+                        </button>
+                        Sort by rating
+                    </a>
+                    <div class="center">
+                        <ul class="list" style="list-style: none;">
+                            <li>
+                                <div class="row bg-white border-brand-blue">
+                                    <div class="col-xs">
+                                        <img class="border-brand-blue" alt="Kevin Russells's profile" src="img/search/russells-profile.png" style="border-radius: 50%;" width="100px">
+                                    </div>
+                                    <div class="col-md">
+                                        <p class="fs-600">
+                                            <a class="student-name">Kevin Russells</a>
+                                        </p>
+                                        <p>
+                                            <a class="student-gradelevel">Senior</a>,&nbsp;<a class="student-major">Business Management</a>
+                                        </p>
+                                        <p>
+                                            <a class="student-minor">Minor: Accounting</a>
+                                        </p>
+                                        <a class="student-rating">★★★★★</a>
+                                    </div>
+                                    <div class="col-md center">
+                                        <a class="bttn-outline-brand-blue" href="#">Connect</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row bg-white border-brand-blue">
+                                    <div class="col-xs">
+                                        <img class="border-brand-blue" alt="Katie Marshall's profile" src="img/search/marshall-profile.png" style="border-radius: 50%;" width="100px">
+                                    </div>
+                                    <div class="col-md">
+                                        <p class="fs-600">
+                                            <a class="student-name">Katie Marshall</a>
+                                        </p>
+                                        <p>
+                                            <a class="student-gradelevel">Junior</a>,&nbsp;<a class="student-major">Computer Science</a>
+                                        </p>
+                                        <a class="student-rating">★★★★½</a>
+                                    </div>
+                                    <div class="col-md center">
+                                        <a class="bttn-outline-brand-blue" href="#">Connect</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row bg-white border-brand-blue">
+                                    <div class="col-xs">
+                                        <img class="border-brand-blue" alt="John Bender's profile" src="img/search/bender-profile.png" style="border-radius: 50%;" width="100px">
+                                    </div>
+                                    <div class="col-md">
+                                        <p class="fs-600">
+                                            <a class="student-name">John Bender</a>
+                                        </p>
+                                        <p>
+                                            <a class="student-gradelevel">Sophomore</a>,&nbsp;<a class="student-major">History</a>
+                                        </p>
+                                        <a class="student-rating">★★</a>
+                                    </div>
+                                    <div class="col-md center">
+                                        <a class="bttn-outline-brand-blue" href="#">Connect</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -167,5 +199,43 @@
                 &nbsp;ProjectConnect, Inc. 2022
             </footer>
         </div>
+
+        <script src="js/list.js"></script>
+        <script src="js/student-search.js"></script>
+        <script>
+            $(document).ready(function() {
+                let studentRatingSort = document.getElementById('student-rating-sort');
+                let studentNameSort = document.getElementById('student-name-sort');
+                let studentRatingSortIcon = document.getElementById('student-rating-sort-icon');
+                let studentNameSortIcon = document.getElementById('student-name-sort-icon');
+
+                let sortNumericUp_Displayed = true;
+                let sortNameUp_Displayed = true;
+
+                studentRatingSort.addEventListener('click', () => {
+                    if (sortNumericUp_Displayed) {
+                        studentRatingSortIcon.classList.remove("bi-sort-numeric-up");
+                        studentRatingSortIcon.classList.add("bi-sort-numeric-down-alt");
+                    }
+                    else {
+                        studentRatingSortIcon.classList.remove("bi-sort-numeric-down-alt");
+                        studentRatingSortIcon.classList.add("bi-sort-numeric-up");
+                    }
+                    sortNumericUp_Displayed = !sortNumericUp_Displayed;
+                });
+
+                studentNameSort.addEventListener('click', () => {
+                    if (sortNameUp_Displayed) {
+                        studentNameSortIcon.classList.remove("bi-sort-alpha-up");
+                        studentNameSortIcon.classList.add("bi-sort-alpha-down-alt");
+                    }
+                    else {
+                        studentNameSortIcon.classList.remove("bi-sort-alpha-down-alt");
+                        studentNameSortIcon.classList.add("bi-sort-alpha-up");
+                    }
+                    sortNameUp_Displayed = !sortNameUp_Displayed;
+                });
+            });
+        </script>
     </body>
 </html>
