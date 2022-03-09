@@ -88,7 +88,7 @@ select {
 
 footer {
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     margin-top: auto;
     padding: 0 10px 0 10px;
     border-top: hsl( var(--clr-brand-blue) ) 3px solid;
@@ -114,6 +114,13 @@ footer {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+}
+
+@media only screen
+and (max-width: 364px) {
+    #hide-on-small-phone {
+        display: none;
     }
 }
 
