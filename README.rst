@@ -26,7 +26,7 @@ Having previously explicated the problem, offered our solution, generated person
 drafted five task flows in Deliverable 1, we have now entered the early stages of design. In this
 deliverable we have mapped our task flows onto storyboards, developed wireframes as higher-fidelity
 corrolaries of the storyboards, and finally prototyped a clean, fully responsive HTML protoype for
-the interface we have names ProjectConnect, that we feel accurately reflects the core visual
+the interface we have named ProjectConnect, that we feel accurately reflects the core visual
 components and layout that we will use when we begin developing the functionality of our solution.
 
 This README file is designed so you can conveniently view and all of our Deliverable 2 work
