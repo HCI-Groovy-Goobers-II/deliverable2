@@ -66,7 +66,7 @@ p {
 body {
     /* Browser default lh is 1.4 */
     font-family: var(--ff-sans-normal);
-    font-size: var(--fs-400);
+    font-size: var(--fs-300);
     color: hsl( var(--clr-dark) );
     line-height: 1.6;
     min-height: 100vh;
@@ -188,7 +188,7 @@ and (max-width: 364px) {
 
 .center {
     margin: auto;
-    width: 80%;
+    width: 86%;
     padding: 10px;
     text-align: left;
     align-items: left;
@@ -253,6 +253,11 @@ and (max-width: 364px) {
     text-decoration: none;
 }
 
+.list {
+    list-style: none;
+    word-wrap: break-word;
+}
+
 .nav-item :hover {
     border: 1px solid hsl( var(--clr-brand-blue) );
     border-radius: 5px;
@@ -272,18 +277,6 @@ and (max-width: 364px) {
 
 .card-text {
     margin-top: 2%;
-}
-
-.footer-link {
-    font-size: var(--fs-600);
-    font-weight: 500;
-    text-decoration: none!important;
-    color: black;
-    cursor: pointer;
-}
-
-.footer-link :hover {
-    color: hsl( var(--clr-brand-blue) );
 }
 
 /* Screen reader class: Hide content for sighted users but show for screen reader */
