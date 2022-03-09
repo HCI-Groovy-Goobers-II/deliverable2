@@ -29,7 +29,7 @@ corrolaries of the storyboards, and finally prototyped a clean, fully responsive
 the interface we have named ProjectConnect, that we feel accurately reflects the core visual
 components and layout that we will use when we begin developing the functionality of our solution.
 
-This README file is designed so you can conveniently view and all of our Deliverable 2 work
+This README file is designed so you can conveniently view all of our Deliverable 2 work
 from within this file. In the `HTML Prototype`_  section, you fill find links that will let
 you access the protype's web pages from within your browser.
 
