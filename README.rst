@@ -17,7 +17,7 @@ Overview
 #########
 
 For a quick recap our project and problem space, the Groovy Goobers are seeking to create a solution
-suitable for university students to rate each other nad view ratings of each other from course team
+suitable for university students to rate each other and view ratings of each other from course team
 projects. Additionally, our solution aims at making issuing and tracking peer evaluations easier on
 an instructor's end by allowing the professor to issue peer evaluations within the platform per
 project. The peer evaluations are intended to cumulatively form each student's rating.
@@ -25,7 +25,7 @@ project. The peer evaluations are intended to cumulatively form each student's r
 Having previously explicated the problem, offered our solution, generated personas, and roughly
 drafted five task flows in Deliverable 1, we have now entered the early stages of design. In this
 deliverable we have mapped our task flows onto storyboards, developed wireframes as higher-fidelity
-corrolaries of the storyboards, and finally prototyped a clean, fully responsive HTML protoype for
+corrolaries of the storyboards, and finally developed a clean, fully responsive HTML protoype for
 the interface we have named ProjectConnect, that we feel accurately reflects the core visual
 components and layout that we will use when we begin developing the functionality of our solution.
 
@@ -38,7 +38,7 @@ Note on Viewing the Prototype Pages
 
 The landing page, registration page, and login page are all accessible from the main navigation,
 however, the search page (located in `src/search.html`) cannot be accessed from any of the site
-links. This is because the search page represents a primative version of what will become the
+links. This is because the search page represents a primitive version of what will become the
 new home page following a student's login. The search page does have working search and sorting.
 
 Storyboards
