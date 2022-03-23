@@ -8,7 +8,9 @@
     --clr-light: 231 77% 90%;
     --clr-white: 0 0% 100%;
     --clr-brand-blue: 204, 92%, 48%;
-    --clr-brand-blue-shadow: 204, 94%, 43%;
+    --clr-brand-blue-hover: 204, 94%, 43%;
+    --clr-danger: 354, 70%, 53%;
+    --clr-danger-hover: 354, 70%, 48%;
 
     /* Font-sizes */
     --fs-900: 9.375rem;
@@ -61,6 +63,14 @@ h4,
 h5,
 p {
     font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-bottom: 10px;
 }
 
 body {
@@ -226,7 +236,7 @@ and (max-width: 364px) {
 }
 
 .bttn-brand-blue:hover {
-    background-color: hsl( var(--clr-brand-blue-shadow) );
+    background-color: hsl( var(--clr-brand-blue-hover) );
     color: hsl( var(--clr-white) );
     text-decoration: none;
 }
@@ -252,6 +262,52 @@ and (max-width: 364px) {
     color: hsl( var(--clr-white) )!important;
     text-decoration: none;
 }
+
+.bttn-danger {
+    border: 1px solid hsl( var(--clr-danger) );
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    background-color: transparent;
+    transition-duration: 0.2s;
+    background-color: hsl( var(--clr-danger) );
+    color: hsl( var(--clr-white) );
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bttn-danger:hover {
+    background-color: hsl( var(--clr-danger-hover) );
+    color: hsl( var(--clr-white) )!important;
+    text-decoration: none;
+}
+
+.bttn-outline-danger {
+    border: 1px solid hsl( var(--clr-danger) );
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    background-color: transparent;
+    transition-duration: 0.2s;
+    color: hsl( var(--clr-danger) );
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bttn-outline-danger:hover {
+    background-color: hsl( var(--clr-danger) );
+    color: hsl( var(--clr-white) )!important;
+    text-decoration: none;
+}
+
 
 .list {
     list-style: none;
@@ -309,6 +365,7 @@ and (max-width: 364px) {
 .text-dark { color: hsl( var(--clr-dark) ); }
 .text-accent { color: hsl( var(--clr-light) ); }
 .text-white { color: hsl( var(--clr-white) ); }
+.text-danger { color: hsl( var(--clr-danger) ) }
 
 /* Typography */
 
